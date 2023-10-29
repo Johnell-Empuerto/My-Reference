@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* The modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    overflow-y: auto;
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styles for the code box */
+.code-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    overflow: auto;
+    max-width: 100%; /* Adjust as needed */
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+/* Styles for the code inside the box */
+code {
+    display: block;
+    white-space: pre;
+    color: #333;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .code-box {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Adjust modal styles for smaller screens */
+    .modal-content {
+        margin: 20% auto;
+        padding: 10px;
+        max-width: 90%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img src="your_image.jpg" alt="Image">
+        <p>This is the paragraph content of the Certainly! Here are 300 words of Lorem Ipsum:
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iusto incidunt hic, veniam eligendi, aspernatur, aut saepe accusantium delectus quos aliquam quis quo dignissimos repellendus quaerat. Dolores veniam tenetur doloribus explicabo necessitatibus, fuga iusto maxime, praesentium eaque laboriosam quasi veritatis labore ut, repellendus cum facere incidunt quos! A pariatur eaque omnis aspernatur repellat doloremque blanditiis neque. Similique minus sequi perspiciatis qui, officiis quos reprehenderit cum obcaecati perferendis, soluta nisi tenetur enim distinctio laudantium dolor optio aspernatur libero dolorem nam. Nesciunt, porro perspiciatis neque natus optio similique dignissimos modi nisi facere non explicabo obcaecati labore dolor voluptas reprehenderit perferendis eveniet veniam.
+
+        Pellentesque at pulvinar nisl. Sed a tortor ac sapien egestas consectetur. Phasellus ut arcu sed odio accumsan laoreet. Vivamus et ante quis ex auctor congue a eu odio. In hac habitasse platea dictumst. Vivamus auctor sed libero non feugiat. Sed euismod malesuada sem, nec fermentum dolor scelerisque sed. Nullam id justo eget justo laoreet dignissim.</p>
+    </div>
+</div>
+
+<h2>This is a Modal Template</h2>
+<div class="code-box">
+    <pre>
+        <code>
+            
+            
+            
+            <h2>This is a Modal Template</h2>
+            <div class="code-box">
+                <pre>
+                    <code>
+                        HTML: 
+                        &lt;div id="myModal" class="modal"&gt;
+                            &lt;div class="modal-content"&gt;
+                                &lt;span class="close" onclick="closeModal()"&gt;&times;&lt;/span&gt;
+                                &lt;img src="your_image.jpg" alt="Image"&gt;
+                                &lt;p&gt;This is the paragraph content of the Certainly! Here are 300 words of Lorem Ipsum:
+            
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iusto incidunt hic, veniam eligendi, aspernatur, aut saepe accusantium delectus quos aliquam quis quo dignissimos repellendus quaerat. Dolores veniam tenetur doloribus explicabo necessitatibus, fuga iusto maxime, praesentium eaque laboriosam quasi veritatis labore ut, repellendus cum facere incidunt quos! A pariatur eaque omnis aspernatur repellat doloremque blanditiis neque. Similique minus sequi perspiciatis qui, officiis quos reprehenderit cum obcaecati perferendis, soluta nisi tenetur enim distinctio laudantium dolor optio aspernatur libero dolorem nam. Nesciunt, porro perspiciatis neque natus optio similique dignissimos modi nisi facere non explicabo obcaecati labore dolor voluptas reprehenderit perferendis eveniet veniam.
+            
+                                Pellentesque at pulvinar nisl. Sed a tortor ac sapien egestas consectetur. Phasellus ut arcu sed odio accumsan laoreet. Vivamus et ante quis ex auctor congue a eu odio. In hac habitasse platea dictumst. Vivamus auctor sed libero non feugiat. Sed euismod malesuada sem, nec fermentum dolor scelerisque sed. Nullam id justo eget justo laoreet dignissim.&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        Css:
+                        
+                    </code>
+                </pre>
+            </div>
+            
+
+        </code>
+    </pre>
+</div>
+
+
+<script>
+    // Function to open the modal when the page loads
+    window.onload = function() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+</body>
+</html>

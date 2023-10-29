@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.member-name {
+    margin: 10px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Add media queries to make it responsive as needed */
+
+@media (max-width: 800px){
+    .modal-content {max-width: 70%}
+}
+
+</style>
+    <title>Meet Our Team</title>
+</head>
+<body>
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="1.jpg" alt="Team Member 1" class="member-image">
+            <h2 class="member-name">John Doe</h2>
+            <p class="member-position">Designer</p>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>John Doe</h2>
+                    <p>Designer</p>
+                    <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <img src="1.jpg" alt="Team Member 1" class="member-image">
+            <h2 class="member-name">John Doe</h2>
+            <p class="member-position">Designer</p>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>John The great</h2>
+                    <p>Designer</p>
+                    <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the structure for other team members -->
+    </div>
+   <!-- ... Your existing HTML and CSS ... -->
+<script>
+    const teamMembers = document.querySelectorAll('.team-member');
+    const modals = document.querySelectorAll('.modal');
+
+    teamMembers.forEach((member, index) => {
+        member.addEventListener('click', () => {
+            modals[index].style.display = 'block';
+        });
+    });
+
+    modals.forEach((modal, index) => {
+        const closeBtn = modal.querySelector('.close');
+        closeBtn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Stop the click event from propagating
+            modal.style.display = 'none';
+        });
+    });
+</script>
+
+</body>
+</html>

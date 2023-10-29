@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Equal-Height Image Boxes</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the box container */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Style the box container using flexbox */
+        .box-container {
+            display: flex;
+            flex-wrap: wrap; /* Wrap boxes when they reach the container width */
+            justify-content: center; /* Center boxes horizontally */
+        }
+
+        /* Style the box */
+        .box {
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Beautiful box shadow */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text within the box */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Style the image */
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the heading */
+        .box h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Style the paragraph */
+        .box p {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* Style the "Click Here" button */
+        .box button {
+            margin-top: auto; /* Push the button to the bottom */
+            background-color: #0074d9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px; /* Border radius */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">
+            <img src="1.jpg" alt="Image 1">
+            <h2>Long Title Heading 1 in the boxes fantastic Services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, minima! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, adipisci.</p>
+            <button>Click Here</button>
+        </div>
+
+        <div class="box">
+            <img src="1.jpg" alt="Image 2">
+            <h2>Heading 2</h2>
+            <p>Nulla facilisi. Vivamus in felis id libero pharetra.</p>
+            <button>Click Here</button>
+        </div>
+
+        <div class="box">
+            <img src="1.jpg" alt="Image 2">
+            <h2>Heading 3</h2>
+            <p>Nulla facilisi. Vivamus in felis id libero pharetra. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, quidem magni?</p>
+            <button>Click Here</button>
+        </div>
+    </div>
+</body>
+</html>
