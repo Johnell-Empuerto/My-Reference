@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .team-members-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        .team-member {
+            display: grid;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            align-items: center;
+            cursor: pointer;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .member-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .member-details {
+            padding: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0;
+            color: #888;
+        }
+
+        .view-profile-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .view-profile-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Bio Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="team-members-container">
+        <div class="team-member" onclick="showBio(1)">
+            <div class="member-image">
+                <img src="1.jpg" alt="Team Member 1">
+            </div>
+            <div class="member-details">
+                <h3>Johnell Empuerto</h3>
+                <p>Website Developer</p>
+                <a href="#" class="view-profile-button">View Profile</a>
+            </div>
+        </div>
+        <div class="team-member" onclick="showBio(2)">
+            <div class="member-image">
+                <img src="1.jpg" alt="Team Member 2">
+            </div>
+            <div class="member-details">
+                <h3>Dr. Franskestien Empuerto Manguilmitoan</h3>
+                <p>Position 2</p>
+                <a href="#" class="view-profile-button">View Profile</a>
+            </div>
+        </div>
+        <div class="team-member" onclick="showBio(3)">
+            <div class="member-image">
+                <img src="1.jpg" alt="Team Member 3">
+            </div>
+            <div class="member-details">
+                <h3>Another Name</h3>
+                <p>Position 3</p>
+                <a href="#" class="view-profile-button">View Profile</a>
+            </div>
+        </div>
+        <!-- Add more team members as needed -->
+    </div>
+
+    <!-- Bio Modal -->
+    <div id="bio-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="hideBio()">&times;</span>
+            <h3>Bio Name</h3>
+            <p>Bio Position</p>
+            <p>Additional Bio Details</p>
+        </div>
+    </div>
+
+    <script>
+        function showBio(memberId) {
+            const modal = document.getElementById("bio-modal");
+            modal.style.display = "block";
+        }
+
+        function hideBio() {
+            const modal = document.getElementById("bio-modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
